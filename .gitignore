@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 虛擬環境
+venv/
+env/
+ENV/
+.venv
+
+# 環境變數
+.env
+.env.local
+
+# 資料庫
+*.db
+*.sqlite
+*.sqlite3
+data/*.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 系統檔案
+.DS_Store
+Thumbs.db
+
+# 臨時檔案
+*.tmp
+*.log
+*.bak
+
+# 音訊檔案（如果很大）
+# *.wav
+# *.mp3
+

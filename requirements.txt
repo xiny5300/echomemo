@@ -1,0 +1,26 @@
+# Python 依賴套件清單
+
+# 環境變數管理
+python-dotenv>=1.0.0
+
+# GPIO 控制
+gpiozero>=1.6.2
+
+# OLED 顯示器
+luma.oled>=3.12.0
+luma.core>=2.4.0
+Pillow>=10.0.0
+
+# 音訊處理
+sounddevice>=0.4.6
+soundfile>=0.12.1
+numpy>=1.24.0
+
+# HTTP 請求
+requests>=2.31.0
+
+# Google Gemini AI
+google-generativeai>=0.3.0
+
+# 資料庫（SQLite 為 Python 內建，無需安裝）
+
