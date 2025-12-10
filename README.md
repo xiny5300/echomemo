@@ -138,7 +138,3 @@ echomemo/
 - 確認 I2C 已啟用：`sudo raspi-config`
 - 檢查 I2C 裝置：`i2cdetect -y 1`
 - 確認 OLED 地址為 0x3C
-
-## 授權
-
-本專案為開源專案，歡迎貢獻。
