@@ -23,11 +23,18 @@ EchoMemo 是一個運行於 Raspberry Pi 5 的 AI 數位人格系統，透過每
 - USB 麥克風
 - 音訊輸出裝置
 
-## GPIO 腳位配置
+## GPIO 腳位配置 (根據 spec.md 已驗證的接線)
 
-- **OLED**: SDA (GPIO 2), SCL (GPIO 3)
-- **旋轉編碼器**: CLK (GPIO 5), DT (GPIO 6), SW (GPIO 13)
-- **錄音按鈕**: GPIO 17
+- **OLED (I2C)**: 
+  - SDA: GPIO 2
+  - SCL: GPIO 3
+  - I2C Address: 0x3C
+- **旋轉編碼器 (EC11)**: 
+  - CLK: GPIO 22 (Pin 15)
+  - DT: GPIO 27 (Pin 13)
+  - SW: GPIO 17 (Pin 11) - 編碼器按鈕
+- **錄音按鈕**: 
+  - GPIO 23 (Pin 16) - 獨立按鈕
 
 ## 安裝步驟
 
@@ -138,7 +145,3 @@ echomemo/
 - 確認 I2C 已啟用：`sudo raspi-config`
 - 檢查 I2C 裝置：`i2cdetect -y 1`
 - 確認 OLED 地址為 0x3C
-
-## 授權
-
-本專案為開源專案，歡迎貢獻。

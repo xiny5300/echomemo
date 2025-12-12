@@ -31,7 +31,7 @@ class AI:
     def __init__(self):
         """初始化 Gemini API"""
         genai.configure(api_key=config.Config.GEMINI_KEY)
-        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        self.model = genai.GenerativeModel("models/gemini-2.0-flash")
         self.db = Database()
         
         # 不同模式的 System Prompt

@@ -323,6 +323,9 @@ class EchoMemo:
     async def run(self):
         """主運行循環"""
         try:
+            # 設定硬體事件循環（用於處理執行緒安全的事件）
+            self.hw.set_event_loop(asyncio.get_event_loop())
+            
             # 初始化顯示
             self.display.show_text("EchoMemo", 0, 0)
             await asyncio.sleep(1)
@@ -332,7 +335,10 @@ class EchoMemo:
             
             # 主循環
             while True:
-                await asyncio.sleep(0.1)
+                # 處理硬體事件佇列（執行緒安全）
+                await self.hw.process_events()
+                
+                await asyncio.sleep(0.05)  # 減少延遲以提高響應性
                 
                 # 根據當前模式執行循環邏輯
                 if self.current_mode == config.Config.MODE_DAILY:
